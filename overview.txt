@@ -1,0 +1,26 @@
+Description of data files and tasks:
+The csv files in this folder contain summaries of input and output of a crop simulation model run with various inputs.
+Each row corresponds to a single simulation. The column headers are:
+--
+Metsite: the weather station used
+Year: the year of the simulation
+N: the fertilizer rate (kg/ha)
+DE: the sowing density (plants/m)
+H: the initial water content (% of capacity)
+S: sowing date
+CU: cultivar name
+Pawc: soil plant available water capacity (mm)
+Ylds: yield
+Rest of columns: summary of weather for that year
+--
+Possible tasks:
+Assume a given field has the following fixed management and soil conditions over time: N, DE, CU, pawc.
+Build a model that predicts the pawc for a field given only a history of yields and weather*.
+Test how the out-of-sample skill changes as you reduce the amount of historical data used from the full record, 
+to the most recent 20 years, to the most recent 10 years.
+
+Using only simulations for 1980-2010 for training, predict the yields for a field for 2011-2015 using only weather* information.
+Repeat the same using 1990-2010, or 2000-2010. 
+
+*Consider weather to include all of the in-season variables, as well as the value of H 
+which reflects pre-season weather that sets the initial conditions for the season.

@@ -1,2 +1,4 @@
 foodsecenv
 .~lock*
+.ipynb_checkpoints
+virtualenv
